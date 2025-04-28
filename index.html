@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Học Trực Tuyến</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f0ff;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background-color: #0077cc;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .lesson-list {
+            margin-top: 20px;
+        }
+        .lesson {
+            background-color: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .lesson:hover {
+            background-color: #d0e9ff;
+        }
+        .content {
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>Học Trực Tuyến</header>
+
+<div class="lesson-list">
+    <div class="lesson" onclick="showLesson('Toán học cơ bản: Cộng trừ nhân chia.')">Bài 1: Toán</div>
+    <div class="lesson" onclick="showLesson('Ngữ văn: Phân tích bài thơ Mùa Xuân nho nhỏ.')">Bài 2: Văn</div>
+    <div class="lesson" onclick="showLesson('Tiếng Anh: Các thì cơ bản trong tiếng Anh.')">Bài 3: Anh văn</div>
+</div>
+
+<div id="lessonContent" class="content"></div>
+
+<script>
+function showLesson(content) {
+    var lessonDiv = document.getElementById("lessonContent");
+    lessonDiv.innerHTML = content;
+    lessonDiv.style.display = "block";
+}
+</script>
+
+</body>
+</html>
